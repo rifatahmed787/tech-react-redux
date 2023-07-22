@@ -1,7 +1,9 @@
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { FiSend } from 'react-icons/fi';
+import { usePostCommentMutation } from '@/redux/features/api/apiSlice';
 
 const dummyComments = [
   'Bhalo na',
@@ -10,7 +12,31 @@ const dummyComments = [
   '200 taka dibo, hobe ??',
 ];
 
-export default function ProductReview() {
+interface IProps {
+  id: string;
+}
+
+export default function ProductReview({ id }: IProps) {
+  const [inputValue, setInpurValue] = useState<string>('');
+
+  const [postComment, { isLoading, isError, isSuccess }] =
+    usePostCommentMutation();
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(inputValue);
+
+    const options = {
+      id: id,
+      data: { comment: inputValue },
+    };
+    postComment(options);
+    setInpurValue('');
+  };
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setInpurValue(event.target.value);
+  };
+
   return (
     <div className="max-w-7xl mx-auto mt-5">
       <div className="flex gap-5 items-center">

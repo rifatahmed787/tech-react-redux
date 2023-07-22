@@ -13,7 +13,8 @@
       "20 days of battery life"
     ],
     "status": true,
-    "rating": 4
+    "rating": 4,
+    "comments":[]
   },
   {
     "_id": 2,
@@ -29,7 +30,8 @@
       "20-day battery life"
     ],
     "status": false,
-    "rating": 3
+    "rating": 3,
+    "comments":[]
   },
   {
     "_id": 3,
@@ -44,7 +46,8 @@
       "Versatile watch faces, support customize watch face"
     ],
     "status": true,
-    "rating": 5
+    "rating": 5,
+    "comments":[]
   },
   {
     "_id": 4,
@@ -59,7 +62,8 @@
       "20 days of battery life"
     ],
     "status": true,
-    "rating": 2
+    "rating": 2,
+    "comments":[]
   },
   {
     "_id": 5,
@@ -75,7 +79,8 @@
       "Support Alipay offline payment"
     ],
     "status": false,
-    "rating": 4
+    "rating": 4,
+    "comments":[]
   },
   {
     "_id": 6,
@@ -91,6 +96,7 @@
       "21 days of battery life"
     ],
     "status": true,
-    "rating": 5
+    "rating": 5,
+    "comments":[]
   }
 ]
